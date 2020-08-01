@@ -10,8 +10,12 @@ class UsersController < ApplicationController
 
 	def update_roles
 		@user = User.where(id: params[:user])
-       @user.roles << 
+       @user.roles << Role.where(name: params[:admine])
       debugger
+	end
+
+
+	def abcdef
 	end
 
 	private 
